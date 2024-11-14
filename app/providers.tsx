@@ -1,4 +1,5 @@
 'use client'
+
 import { ThemeProvider } from '@/components/theme-provider'
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
