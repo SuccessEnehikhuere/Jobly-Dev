@@ -14,6 +14,7 @@ async function Jobs() {
    queryKey: ['jobs', '', 'all', 1],
    queryFn: () => getAllJobsAction({}),
  })
+ 
  return (
    <HydrationBoundary state={dehydrate(queryClient)}>
      <SearchForm />
