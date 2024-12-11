@@ -216,9 +216,9 @@ export async function getChartsDataAction(): Promise<
     const jobs = await prisma.job.findMany({
       where: {
         clerkId: userId,
-        createdAt: {
-          gte: sixMonthsAgo,
-        },
+        // createdAt: {
+        //   gte: sixMonthsAgo,
+        // },
       },
       orderBy: {
         createdAt: 'asc',
