@@ -46,7 +46,7 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
   }
 
   const renderPageButtons = () => {
-    const pageButtons = []
+     const pageButtons: JSX.Element[] = []; 
     // first page
     pageButtons.push(addPageButton({ page: 1, activeClass: currentPage === 1 }))
     // dots
