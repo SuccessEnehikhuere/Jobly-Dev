@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from './ui/input'
 
+// @ts-ignore
 type CustomFormFieldProps = {
   name: string
   control: Control<any>

@@ -18,7 +18,7 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
   const router = useRouter()
   const pathname = usePathname()
 
-  const pageButtons = Array.from({ length: totalPages }, (_, i) => i + 1)
+  // const pageButtons = Array.from({ length: totalPages }, (_, i) => i + 1)
 
   const handlePageChange = (page: number) => {
     const defaultParams = {
@@ -27,7 +27,7 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
       page: String(page),
     }
 
-    let params = new URLSearchParams(defaultParams)
+    const params = new URLSearchParams(defaultParams)
 
     router.push(`${pathname}?${params.toString()}`)
   }
