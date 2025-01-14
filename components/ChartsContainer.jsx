@@ -19,10 +19,10 @@ function ChartsContainer() {
     queryFn: () => getChartsDataAction(),
   })
 
-  console.log('data', data)
+
 
   if (isPending) return <h2 className="text-xl font-medium">Please wait...</h2>
-  if (!data || data.length < 1) return null
+  if (!data || data.length < 1) return null;
   return (
     <section className="mt-16">
       <h1 className="text-4xl font-semibold text-center">

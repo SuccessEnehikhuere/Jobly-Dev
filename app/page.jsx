@@ -16,11 +16,10 @@ export default function Home() {
             job <span className="text-primary">tracking</span> app
           </h1>
           <p className="leading-loose max-w-md mt-4 ">
-            Jobly is where talent meets opportunity. We&apos;re dedicated to
-            helping job seekers find their dream roles and employers discover
-            exceptional candidates. Whether you&apos;re building your career or
-            your team, Jobly is here to help you succeed. Your journey starts
-            with us!
+            Welcome to Jobly, the job tracking system designed to make your job
+            search more organized. We know the process can be overwhelming, So
+            we&apos;ve created a simple tool to help you add, edit, and delete
+            job applications with ease.
           </p>
           <Button asChild className="mt-4">
             <Link href="/add-job">Get Started</Link>

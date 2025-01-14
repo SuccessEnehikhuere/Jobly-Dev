@@ -9,7 +9,7 @@ import { Form } from '@/components/ui/form'
 import { CustomFormField, CustomFormSelect } from './FormComponents'
 import { useMutation, useQueryClient, useQuery } from '@tanstack/react-query'
 import { getSingleJobAction, updateJobAction } from '@/utils/actions'
-import { createAndEditJobSchema } from '@/utils/types'
+import { createAndEditJobSchema, JobStatus, JobMode } from '@/utils/types'
 import { useToast } from '@/hooks/use-toast'
 import { useRouter } from 'next/navigation'
 
@@ -47,8 +47,8 @@ function EditJobForm({ jobId }) {
       position: data?.position || '',
       company: data?.company || '',
       location: data?.location || '',
-      status: data?.status || 'Pending',
-      mode: data?.mode || 'FullTime',
+       status: (data?.status) || JobStatus.Pending,
+      mode: (data?.mode ) || JobMode.FullTime,
     },
   })
 
@@ -77,14 +77,14 @@ function EditJobForm({ jobId }) {
             name="status"
             control={form.control}
             labelText="job status"
-            items={['Pending', 'Active', 'Closed']}
+            items={Object.values(JobStatus)}
           />
           {/* job type */}
           <CustomFormSelect
             name="mode"
             control={form.control}
             labelText="job mode"
-            items={['FullTime', 'PartTime']}
+            items={Object.values(JobMode)}
           />
 
           <Button
