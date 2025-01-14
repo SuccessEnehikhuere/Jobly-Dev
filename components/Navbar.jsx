@@ -1,3 +1,5 @@
+'use client'
+
 import LinksDropdown from './LinksDropdown'
 import { UserButton } from '@clerk/nextjs'
 import ThemeToggle from './ThemeToggle'
