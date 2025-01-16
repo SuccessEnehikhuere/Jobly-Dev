@@ -20,7 +20,6 @@ function ChartsContainer() {
   })
 
 
-
   if (isPending) return <h2 className="text-xl font-medium">Please wait...</h2>
   if (!data || data.length < 1) return null;
   return (

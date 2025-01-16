@@ -8,7 +8,7 @@ import { Button } from './ui/button'
 import { usePathname } from 'next/navigation'
 
 function Sidebar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <aside className="py-4 px-8 bg-muted h-full">
