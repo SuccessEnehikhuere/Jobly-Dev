@@ -16,7 +16,8 @@ import JobInfo from './JobInfo'
 import DeleteJobButton from './DeleteJobButton'
 
 function JobCard({ job }) {
-  const date = new Date(job?.createdAt).toLocaleDateString()
+  const date = new Date(job?.createdAt).toLocaleDateString();
+  
 
   return (
     <Card className="bg-muted">
